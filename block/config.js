@@ -3,6 +3,7 @@ let setup = require("./menu/config.group.setup");
 let motor = require("./menu/config.group.motor");
 let display = require("./menu/config.group.display");
 let buzzer = require("./menu/config.group.buzzer");
+let rgb = require("./menu/config.group.rgb");
 
 module.exports = {
     blocks : [
@@ -15,11 +16,12 @@ module.exports = {
             index: 60,
             icon: `file:///${dirIcon}/static/icons/led.png`,
         },
+        rgb,
         buzzer,
         {
             name: 'Ввод',
             color: '230',
-            index: 60,
+            index: 90,
             icon: `file:///${dirIcon}/static/icons/pad.png`,
         },
         {
@@ -333,7 +335,7 @@ module.exports = {
                             `<block type="text_length">
                                 <value name="VALUE">
                                     <shadow type="basic_string">
-                                        <field name="VALUE">Hello world!</field>
+                                        <field name="VALUE">Робот Лев!</field>
                                     </shadow>
                                 </value>
                             </block>`
@@ -343,7 +345,7 @@ module.exports = {
                             `<block type="text_append">
                                 <value name="TEXT">
                                     <shadow type="basic_string">
-                                        <field name="VALUE">Hello world!</field>
+                                        <field name="VALUE">Робот Лев!</field>
                                     </shadow>
                                 </value>
                             </block>`
@@ -352,7 +354,7 @@ module.exports = {
                                 `<block type="text_isEmpty">
                                     <value name="VALUE">
                                         <shadow type="basic_string">
-                                            <field name="VALUE">Hello world!</field>
+                                            <field name="VALUE">Робот Лев!</field>
                                         </shadow>
                                     </value>
                                 </block>`
@@ -361,7 +363,7 @@ module.exports = {
                             `<block type="text_indexOf">
                                 <value name="VALUE">
                                     <shadow type="basic_string">
-                                        <field name="VALUE">Hello world!</field>
+                                        <field name="VALUE">Робот Лев!</field>
                                     </shadow>
                                 </value>
                             </block>`
@@ -370,7 +372,7 @@ module.exports = {
                             `<block type="text_charAt">
                                 <value name="VALUE">
                                     <shadow type="basic_string">
-                                        <field name="VALUE">Hello world!</field>
+                                        <field name="VALUE">Робот Лев!</field>
                                     </shadow>
                                 </value>
                             </block>`
@@ -379,7 +381,7 @@ module.exports = {
                             `<block type="text_getSubstring">
                                 <value name="STRING">
                                     <shadow type="basic_string">
-                                        <field name="VALUE">Hello world!</field>
+                                        <field name="VALUE">Робот Лев!</field>
                                     </shadow>
                                 </value>
                             </block>`
@@ -388,7 +390,7 @@ module.exports = {
                             `<block type="text_changeCase">
                                 <value name="TEXT">
                                     <shadow type="basic_string">
-                                        <field name="VALUE">Hello world!</field>
+                                        <field name="VALUE">Робот Лев!</field>
                                     </shadow>
                                 </value>
                             </block>`
@@ -397,7 +399,7 @@ module.exports = {
                             `<block type="text_trim">
                                 <value name="TEXT">
                                     <shadow type="basic_string">
-                                        <field name="VALUE">Hello world!</field>
+                                        <field name="VALUE">Робот Лев!</field>
                                     </shadow>
                                 </value>
                             </block>`
@@ -406,7 +408,7 @@ module.exports = {
                             `<block type="text_replace">
                                 <value name="TEXT">
                                     <shadow type="basic_string">
-                                        <field name="VALUE">Hello world!</field>
+                                        <field name="VALUE">Робот Лев!</field>
                                     </shadow>
                                 </value>
                             </block>`
@@ -428,7 +430,7 @@ module.exports = {
                                 `<block type="wifi_http_get">
                                     <value name="url">
                                         <shadow type="basic_string">
-                                            <field name="VALUE">Hello world!</field>
+                                            <field name="VALUE">Робот Лев!</field>
                                         </shadow>
                                     </value>
                                 </block>`
@@ -438,12 +440,12 @@ module.exports = {
                                 `<block type="wifi_http_post">
                                     <value name="url">
                                         <shadow type="basic_string">
-                                            <field name="VALUE">Hello world!</field>
+                                            <field name="VALUE">Робот Лев!</field>
                                         </shadow>
                                     </value>
                                     <value name="data">
                                         <shadow type="basic_string">
-                                            <field name="VALUE">Hello world!</field>
+                                            <field name="VALUE">Робот Лев!</field>
                                         </shadow>
                                     </value>
                                 </block>`
@@ -455,7 +457,7 @@ module.exports = {
                                 `<block type="wifi_server_send">
                                     <value name="text">
                                         <shadow type="basic_string">
-                                            <field name="VALUE">Hello world!</field>
+                                            <field name="VALUE">Робот Лев!</field>
                                         </shadow>
                                     </value>
                                 </block>`
@@ -478,7 +480,7 @@ module.exports = {
                                 `<block type="bt_send_string">
                                     <value name="text">
                                         <shadow type="basic_string">
-                                            <field name="VALUE">Hello world!</field>
+                                            <field name="VALUE">Робот Лев!</field>
                                         </shadow>
                                     </value>
                                 </block>`
@@ -502,7 +504,7 @@ module.exports = {
                                 `<block type="serial_write_data">
                                     <value name="text">
                                         <shadow type="basic_string">
-                                            <field name="VALUE">Hello world!</field>
+                                            <field name="VALUE">Робот Лев!</field>
                                         </shadow>
                                     </value>
                                 </block>`

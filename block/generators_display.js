@@ -80,84 +80,22 @@ module.exports = function(Blockly){
     return code;
   };
 
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  Blockly.JavaScript['i2c128x64_create_image'] = function(block) {
-    var dataurl = block.inputList[1].fieldRow["0"].src_;
-    var image = nativeImage.createFromDataURL(dataurl);
-    var size = image.getSize();
-    var buff = createBuffer(image.getBitmap(),size.width,size.height);
-    var hexStringArr = '';
-    for(let i=1;i<=buff.length;i++){
-      hexStringArr += (buff[i-1] < 16)? `0x0${buff[i-1].toString(16)},` : `0x${buff[i-1].toString(16)},`;
-      if(i % 20 == 0){ hexStringArr += '\n'; }
-    }
-    hexStringArr = hexStringArr.trim();
-    if(hexStringArr.endsWith(',')){
-      hexStringArr = hexStringArr.substring(0,hexStringArr.length - 1);
-    }
-    var code = `(std::vector<uint8_t>{${hexStringArr}})`;
-    return [code, Blockly.JavaScript.ORDER_ATOMIC];
-};
+  Blockly.JavaScript['i2c128x64_display_display'] = function(block) {
+    var code = 'display.display();\n';
+    return code;
+  };
 
-Blockly.JavaScript['i2c128x64_display_image'] = function(block) {
-  var value_img = Blockly.JavaScript.valueToCode(block, 'img', Blockly.JavaScript.ORDER_ATOMIC);
-  var value_x = Blockly.JavaScript.valueToCode(block, 'x', Blockly.JavaScript.ORDER_ATOMIC);
-  var value_y = Blockly.JavaScript.valueToCode(block, 'y', Blockly.JavaScript.ORDER_ATOMIC);
-  var value_width = Blockly.JavaScript.valueToCode(block, 'width', Blockly.JavaScript.ORDER_ATOMIC);
-  var value_height = Blockly.JavaScript.valueToCode(block, 'height', Blockly.JavaScript.ORDER_ATOMIC);  
-  var code = `display.drawFastImage(${value_x}, ${value_y}, ${value_width},${value_height},${value_img}.data());\n`;
-  return code;
-};
-
-
-Blockly.JavaScript['i2c128x64_display_display'] = function(block) {  
-  var code = 'display.display();\n';
-  return code;
-};
-
-Blockly.JavaScript['i2c128x64_display_print'] = function(block) {
-  var value_text = Blockly.JavaScript.valueToCode(block, 'text', Blockly.JavaScript.ORDER_ATOMIC);
-  var value_x = Blockly.JavaScript.valueToCode(block, 'x', Blockly.JavaScript.ORDER_ATOMIC);
-  var value_y = Blockly.JavaScript.valueToCode(block, 'y', Blockly.JavaScript.ORDER_ATOMIC);
-  var dropdown_font = block.getFieldValue('font');  
-  var code = 
-`
-display.setTextSize(${dropdown_font});
-display.setCursor(${value_x},${value_y});
-display.println(String(${value_text}));
-`;
-  return code;
-};
-
-Blockly.JavaScript['i2c128x64_display_print_number'] = function(block) {
-  var value_text = Blockly.JavaScript.valueToCode(block, 'number', Blockly.JavaScript.ORDER_ATOMIC);
-  var value_x = Blockly.JavaScript.valueToCode(block, 'x', Blockly.JavaScript.ORDER_ATOMIC);
-  var value_y = Blockly.JavaScript.valueToCode(block, 'y', Blockly.JavaScript.ORDER_ATOMIC);
-  var dropdown_font = block.getFieldValue('font');  
-  var code = 
-`
-display.setFont(${dropdown_font});
-display.drawString(${value_x},${value_y},String(${value_text}));
-`;
-  return code;
-};
+  Blockly.JavaScript['i2c128x64_display_print'] = function(block) {
+    var value_text = Blockly.JavaScript.valueToCode(block, 'text', Blockly.JavaScript.ORDER_ATOMIC);
+    var value_x = Blockly.JavaScript.valueToCode(block, 'x', Blockly.JavaScript.ORDER_ATOMIC);
+    var value_y = Blockly.JavaScript.valueToCode(block, 'y', Blockly.JavaScript.ORDER_ATOMIC);
+    var dropdown_font = block.getFieldValue('font');
+    var code =
+      `
+      display.setTextSize(${dropdown_font});
+      display.setCursor(${value_x},${value_y});
+      display.println(utf8rus(${value_text}));
+      `;
+    return code;
+  };
 }

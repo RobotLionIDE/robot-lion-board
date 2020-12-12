@@ -13,7 +13,7 @@ module.exports = {
            `<block type="i2c128x64_display_print">
               <value name="text">
                 <shadow type="basic_string">
-                  <field name="VALUE">Hello world!</field>
+                  <field name="VALUE">Робот Лев!</field>
                 </shadow>
               </value>
               <value name="x">

@@ -17,7 +17,7 @@ let outputs = [
   ["Led 1","led1"],
   ["Led 2","led2"],
   ["Led 3","led3"],
-  ["RGB","rgb"],
+  ["RGB","rgb_r"],
   ["Buzzer","buzzer"],
   ["Servo 1","servo1"],
   ["Servo 2","servo2"],
@@ -77,7 +77,7 @@ module.exports = function (Blockly) {
         .appendField(new Blockly.FieldDropdown(outputs), "top_left")
         .appendField("|")
         .appendField(new Blockly.FieldImage(`file:///${dirIcon}/static/icons/f_b_c.png`,40,40,"*"))
-        .appendField(new Blockly.FieldDropdown([["Пусто","null"], ["RGB ","rgb"], ["Дальномер","hcsr04"]]), "top_center")
+        .appendField(new Blockly.FieldDropdown([["Пусто","null"], ["RGB ","rgb_gb"], ["Дальномер","hcsr04"]]), "top_center")
         .appendField("|")
         .appendField(new Blockly.FieldImage(`file:///${dirIcon}/static/icons/f_b_r.png`,40,40,"*"))
         .appendField(new Blockly.FieldDropdown(outputs), "top_right");
