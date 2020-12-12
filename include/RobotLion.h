@@ -4,7 +4,10 @@
 #include "RobotLion_Motor.h"
 #include "RobotLion_Buzzer.h"
 #include "RobotLion_RGB.h"
-#include <Servo.h>
+#include "Servo.h"
+
+Servo servo1;
+Servo servo2;
 
 void RobotLion()
 {
@@ -104,6 +107,12 @@ void front_setup(boolean lr, boolean rr, String tl, String tc, String tr, String
     ledcSetup(RGBRCh, 5000, 8);
     ledcAttachPin(tp, tch);
   }
+  if(tval=="servo1"){
+    servo1.attach(tp, tch);
+  }
+  if(tval=="servo2"){
+    servo2.attach(tp, tch);
+  }
 
 
   ///////////////////////////////////////////////////
@@ -130,7 +139,14 @@ void front_setup(boolean lr, boolean rr, String tl, String tc, String tr, String
     pinMode(RGBRPin, OUTPUT);
     ledcSetup(RGBRCh, 5000, 8);
     ledcAttachPin(tp, tch);
- }
+  }
+  if(tval=="servo1"){
+    servo1.attach(tp, tch);
+  }
+  if(tval=="servo2"){
+    servo2.attach(tp, tch);
+  }
+
 
 
   ///////////////////////////////////////////////////

@@ -98,6 +98,16 @@ module.exports = {
           </block>`
       },
 
+      {
+          xml :
+          `<block type="RL_servo_write">
+    <value name="speed">
+        <shadow type="math_number">
+            <field name="NUM">50</field>
+        </shadow>
+    </value>
+          </block>`
+      },
 
 
   ]

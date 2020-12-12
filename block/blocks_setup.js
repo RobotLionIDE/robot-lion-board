@@ -12,7 +12,17 @@ let inputs = [
   ["Универсальный цифровой обработчик","u_digital"],
 ];
 
-let outputs = [
+let outputs3v = [
+  ["Пусто","null"],
+  ["Led 1","led1"],
+  ["Led 2","led2"],
+  ["Led 3","led3"],
+  ["RGB","rgb_r"],
+  ["Buzzer","buzzer"],
+  ["Универсальный аналоговый обработчик","u_analog"],
+  ["Универсальный цифровой обработчик","u_digital"],
+];
+let outputs5v = [
   ["Пусто","null"],
   ["Led 1","led1"],
   ["Led 2","led2"],
@@ -74,22 +84,22 @@ module.exports = function (Blockly) {
         .appendField(new Blockly.FieldImage(`file:///${dirIcon}/static/icons/f_r_m.png`,40,40,"*"))
       this.appendDummyInput()
         .appendField(new Blockly.FieldImage(`file:///${dirIcon}/static/icons/f_b_l.png`,40,40,"*"))
-        .appendField(new Blockly.FieldDropdown(outputs), "top_left")
+        .appendField(new Blockly.FieldDropdown(outputs3v), "top_left")
         .appendField("|")
         .appendField(new Blockly.FieldImage(`file:///${dirIcon}/static/icons/f_b_c.png`,40,40,"*"))
         .appendField(new Blockly.FieldDropdown([["Пусто","null"], ["RGB ","rgb_gb"], ["Дальномер","hcsr04"]]), "top_center")
         .appendField("|")
         .appendField(new Blockly.FieldImage(`file:///${dirIcon}/static/icons/f_b_r.png`,40,40,"*"))
-        .appendField(new Blockly.FieldDropdown(outputs), "top_right");
+        .appendField(new Blockly.FieldDropdown(outputs3v), "top_right");
       this.appendDummyInput()
         .appendField(new Blockly.FieldImage(`file:///${dirIcon}/static/icons/f_r_l.png`,40,40,"*"))
-        .appendField(new Blockly.FieldDropdown(outputs), "bottom_left")
+        .appendField(new Blockly.FieldDropdown(outputs5v), "bottom_left")
         .appendField("|")
         .appendField(new Blockly.FieldImage(`file:///${dirIcon}/static/icons/f_y_c.png`,40,40,"*"))
         .appendField(new Blockly.FieldDropdown([["Пусто ","null"]]), "bottom_center")
         .appendField("|")
         .appendField(new Blockly.FieldImage(`file:///${dirIcon}/static/icons/f_r_r.png`,40,40,"*"))
-        .appendField(new Blockly.FieldDropdown(outputs), "bottom_right");
+        .appendField(new Blockly.FieldDropdown(outputs5v), "bottom_right");
       this.appendDummyInput()
         ;
       this.setInputsInline(false);

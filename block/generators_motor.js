@@ -68,6 +68,16 @@ Blockly.JavaScript['RL_motor_turn_right'] = function(block) {
 };
 
 
+Blockly.JavaScript['RL_servo_write'] = function(block) {
+  //var variable_instance = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('instance'), Blockly.Variables.NAME_TYPE);
+  var ch = block.getFieldValue('ch');
+  var value_degree = Blockly.JavaScript.valueToCode(block, 'degree', Blockly.JavaScript.ORDER_ATOMIC);
+  var code = `servo${ch}.write(${value_degree});\n`;
+  return code;
+};
+
+
+
 
 
 

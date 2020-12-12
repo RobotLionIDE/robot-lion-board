@@ -29,11 +29,27 @@ module.exports = function(Blockly) {
     var dropdown_bottom_center = block.getFieldValue('bottom_center');
     var dropdown_bottom_right = block.getFieldValue('bottom_right');
 
-    var code = `
+    var code = '';
+/*
+    if((dropdown_bottom_left == 'servo1') || (dropdown_bottom_right == 'servo1')){
+        code = code + `
+        #VARIABLE Servo servo1;#END
+        `;
+    }
+
+    if((dropdown_bottom_left == 'servo2') || (dropdown_bottom_right == 'servo2')){
+        code = code + `
+        #VARIABLE Servo servo2;#END
+        `;
+    }
+*/
+
+    code = code +  `
         #SETUP
             front_setup("${check_left_reverse}", "${check_right_reverse}", "${dropdown_top_left}", "${dropdown_top_center}", "${dropdown_top_right}", "${dropdown_bottom_left}", "${dropdown_bottom_center}", "${dropdown_bottom_right}");
         #END
         `;
+        
     return code;
 
   };
