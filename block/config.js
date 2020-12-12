@@ -1,11 +1,31 @@
-let gpio = require("./menu/config.group.gpio");
+const dirIcon = Vue.prototype.$global.board.board_info.dir;
+let setup = require("./menu/config.group.setup");
+let motor = require("./menu/config.group.motor");
+let display = require("./menu/config.group.display");
+let buzzer = require("./menu/config.group.buzzer");
 
 module.exports = {
     blocks : [
+        setup,
+        motor,
+        display,
+        {
+            name: 'LED',
+            color: '230',
+            index: 60,
+            icon: `file:///${dirIcon}/static/icons/led.png`,
+        },
+        buzzer,
+        {
+            name: 'Ввод',
+            color: '230',
+            index: 60,
+            icon: `file:///${dirIcon}/static/icons/pad.png`,
+        },
         {
             name : 'Ввод/вывод',
             color : '230',
-            index : 10,
+            index : 300,
             icon : '/static/icons/icons8_electronics_96px.png',
             blocks : [
                 {
@@ -104,7 +124,7 @@ module.exports = {
         {
             name : 'Время',
             color : '230',
-            index : 20,
+            index : 400,
             icon : '/static/icons/icons8_Story_Time_96px.png',
             blocks : [
                 {
@@ -142,7 +162,7 @@ module.exports = {
 
         {
             name : 'Переменные',
-            index : 30,
+            index : 500,
             color : '230',
             icon : '/static/icons/icons8_variable_96px.png',
             custom : 'VARIABLE'
@@ -151,7 +171,7 @@ module.exports = {
         {
             name : 'Математика',
             color : '230',
-            index : 40,
+            index : 600,
             icon : '/static/icons/calculator.png',
             blocks : [
                 'math_number',
@@ -247,7 +267,7 @@ module.exports = {
         {
             name : 'Логика',
             color : '230',
-            index : 50,
+            index : 700,
             icon : '/static/icons/icons8_serial_tasks_96px.png',
             blocks : [
                 'controls_if',
@@ -261,7 +281,7 @@ module.exports = {
         {
             name : 'Циклы',
             color : '230',
-            index : 60,
+            index : 800,
             icon : '/static/icons/icons8_repeat_96px.png',
             blocks : [
                 'basic_forever',
@@ -292,7 +312,7 @@ module.exports = {
         {
             name : 'Расширенные',
             color : '195',
-            index : 70,
+            index : 900,
             icon : '/static/icons/icons8_hacker_128px.png',
             blocks : [
                 {

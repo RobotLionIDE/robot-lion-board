@@ -5,9 +5,9 @@ Blockly.Blocks['arduino_init'] = {
     init: function() {
       this.appendStatementInput("code")
           .setCheck(null)
-          .appendField("Установка");
+          .appendField("Сборка");
       this.setColour(230);
-   this.setTooltip("doing once when program started");
+   this.setTooltip("Определение модулей, датчиков");
    this.setHelpUrl("");
     }
   };
@@ -16,9 +16,9 @@ Blockly.Blocks['arduino_loop'] = {
     init: function() {
       this.appendStatementInput("code")
           .setCheck(null)
-          .appendField("Основной цикл");
+          .appendField("Управление");
       this.setColour(230);
-   this.setTooltip("loop forever");
+   this.setTooltip("Цикл управление");
    this.setHelpUrl("");
     }
   };

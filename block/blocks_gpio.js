@@ -13,7 +13,7 @@ Blockly.Blocks['io_setpin'] = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(45);
- this.setTooltip("set pin mode");
+ this.setTooltip("Установить тип пина");
  this.setHelpUrl("");
   }
 };

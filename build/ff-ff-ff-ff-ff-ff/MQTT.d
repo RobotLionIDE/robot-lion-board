@@ -1,0 +1,22 @@
+D:\KBProIDE\dist_electron\win-unpacked\boards\robot-lion\build\ff-ff-ff-ff-ff-ff\MQTT.o: \
+ D:\KBProIDE\dist_electron\win-unpacked\platforms\arduino-esp32\include\MQTT.cpp \
+ D:\KBProIDE\dist_electron\win-unpacked\platforms\arduino-esp32\include\MQTT.h \
+ D:\KBProIDE\dist_electron\win-unpacked\platforms\arduino-esp32\sdk\include\newlib/stdint.h \
+ D:\KBProIDE\dist_electron\win-unpacked\platforms\arduino-esp32\sdk\include\newlib/machine/_default_types.h \
+ D:\KBProIDE\dist_electron\win-unpacked\platforms\arduino-esp32\sdk\include\newlib/sys/features.h \
+ D:\KBProIDE\dist_electron\win-unpacked\platforms\arduino-esp32\sdk\include\newlib/sys/_intsup.h \
+ D:\KBProIDE\dist_electron\win-unpacked\platforms\arduino-esp32\lib\include/pgmspace.h \
+ D:\KBProIDE\dist_electron\win-unpacked\platforms\arduino-esp32\lib\include/Client.h \
+ D:\KBProIDE\dist_electron\win-unpacked\platforms\arduino-esp32\lib\include/Print.h \
+ D:\KBProIDE\dist_electron\win-unpacked\platforms\arduino-esp32\lib\include/WString.h \
+ D:\KBProIDE\dist_electron\win-unpacked\platforms\arduino-esp32\sdk\include\newlib/stdlib.h \
+ D:\KBProIDE\dist_electron\win-unpacked\platforms\arduino-esp32\sdk\include\newlib/machine/stdlib.h \
+ D:\KBProIDE\dist_electron\win-unpacked\platforms\arduino-esp32\sdk\include\newlib/alloca.h \
+ D:\KBProIDE\dist_electron\win-unpacked\platforms\arduino-esp32\sdk\include\newlib/string.h \
+ D:\KBProIDE\dist_electron\win-unpacked\platforms\arduino-esp32\sdk\include\newlib/sys/string.h \
+ D:\KBProIDE\dist_electron\win-unpacked\platforms\arduino-esp32\lib\include/Printable.h \
+ D:\KBProIDE\dist_electron\win-unpacked\platforms\arduino-esp32\lib\include/Stream.h \
+ D:\KBProIDE\dist_electron\win-unpacked\platforms\arduino-esp32\sdk\include\newlib/inttypes.h \
+ D:\KBProIDE\dist_electron\win-unpacked\platforms\arduino-esp32\lib\include/IPAddress.h \
+ D:\KBProIDE\dist_electron\win-unpacked\platforms\arduino-esp32\lib\include/WString.h \
+ D:\KBProIDE\dist_electron\win-unpacked\platforms\arduino-esp32\lib\include/Printable.h

@@ -11,6 +11,20 @@
 #define digitalPinToInterrupt(p)    (((p)<40)?(p):-1)
 #define digitalPinHasPWM(p)         (p < 34)
 
+const int freq = 5000;
+const int resolution = 8;
+
+const int LMChannel = 14;
+const int RMChannel = 15;
+
+const int ML_DIR = 18;
+const int ML_EN = 19;
+
+const int MR_DIR = 23;
+const int MR_EN = 14;
+
+/*
+
 static const uint8_t TX = 1;
 static const uint8_t RX = 3;
 
@@ -52,5 +66,6 @@ static const uint8_t T9 = 32;
 
 static const uint8_t DAC1 = 25;
 static const uint8_t DAC2 = 26;
+*/
 
 #endif /* Pins_Arduino_h */
